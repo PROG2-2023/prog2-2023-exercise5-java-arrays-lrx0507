@@ -286,6 +286,7 @@ public class FlightBooking {
             switch(desChoice) {
             case 1:
             destinationOfTrip = TripDestination.NANJING;
+            
             break;
             case 2:
             destinationOfTrip = TripDestination.BEIJING;
@@ -310,109 +311,6 @@ public class FlightBooking {
         }
         
     }
-
-    /*public String getTicketNumber() {
-        String ticketNum;
-        if(typeOfTrip == TripType.ONE_WAY) {
-            ticketNum = "11";
-            if(bookingClass == BookingClass.FIRST){
-                ticketNum = ticketNum + "F" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true; 
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                }
-            } else if(bookingClass == BookingClass.BUSINESS) {
-                ticketNum = ticketNum + "B" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                }
-            } else if(bookingClass == BookingClass.ECONOMY) {
-                ticketNum = ticketNum + "E" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                }
-            }
-        } else {
-            ticketNum = "22";
-            if(bookingClass == BookingClass.FIRST){
-                ticketNum = ticketNum + "F" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                }
-            } else if(bookingClass == BookingClass.BUSINESS) {
-                ticketNum = ticketNum + "B" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                    //flag1 = true;
-                }
-            } else if(bookingClass == BookingClass.ECONOMY) {
-                ticketNum = ticketNum + "E" + ticketNumber;
-                if(sourceOfTrip == TripSource.PARIS || destinationOfTrip == TripDestination. PARIS) {
-                    ticketNum = ticketNum + "INT";
-                   // flag1 = true;
-                } else if((sourceOfTrip == TripSource.OULU &&  destinationOfTrip == TripDestination.HELSINKI) || (sourceOfTrip == TripSource.HELSINKI &&  destinationOfTrip == TripDestination.OULU)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else if((sourceOfTrip == TripSource.NANJING || sourceOfTrip == TripSource.BEIJING || sourceOfTrip == TripSource.SHANGHAI) && (destinationOfTrip == TripDestination.NANJING || destinationOfTrip == TripDestination.BEIJING || destinationOfTrip == TripDestination.SHANGHAI)) {
-                    ticketNum = ticketNum + "DOM";
-                    //flag1 = false;
-                } else {
-                    ticketNum = ticketNum + "INT";
-                   // flag1 = true;
-                }
-            }
-        }
-
-        return ticketNum;
-    } */ //Overwrote by E5
 
     /*public void setDepartingTicketPrice(int childPassengers, int adultPassengers) {
         double departingTicketPrice = 0.0;
@@ -729,10 +627,6 @@ public class FlightBooking {
         String  tripDestination = input.nextLine();
         System.out.println("Please enter the type of your trip: ");
         String tripType = input.nextLine();
-        System.out.println("Please enter the srcAirport of your trip: ");
-        String srcAirport = input.nextLine();
-        System.out.println("Please enter the desAirport of your trip: ");
-        String desAirport = input.nextLine();
         System.out.println("Please enter the type of your class: ");
         String classType = input.nextLine();
         System.out.println("Please enter your year of departure: ");
@@ -747,6 +641,7 @@ public class FlightBooking {
         int rMonth = input.nextInt();
         System.out.println("Please enter your day of return: ");
         int rDay = input.nextInt();
+        
             
         input.nextLine();
         LocalDate departureDate =  LocalDate.of(dYear, dMonth, dDay);
@@ -760,11 +655,43 @@ public class FlightBooking {
             System.out.println("Please enter the age of the passenger: ");
             int age = input.nextInt();
             input.nextLine();
-            
+
+            String srcAirport = "0";
+            String desAirport = "0";
+
             setPassengerFullName(i,passengersFullName);
             setPassengerGender(i, gender);
             setPassengerAge(i, age);
             setTripSource(tripSource);
+            if(sourceOfTrip == TripSource.NANJING){
+                srcAirport = "1";
+            } else if(sourceOfTrip == TripSource.BEIJING){
+                srcAirport = "2";
+            } else if(sourceOfTrip == TripSource.SHANGHAI){
+                srcAirport = "3";
+            } else if(sourceOfTrip == TripSource.OULU){
+                srcAirport = "4";
+            } else if(sourceOfTrip == TripSource.HELSINKI){
+                srcAirport = "5";
+            }  else if(sourceOfTrip == TripSource.PARIS){
+                srcAirport = "6";
+            }
+            
+            if(destinationOfTrip == TripDestination.NANJING){
+                desAirport = "1";
+            } else if(destinationOfTrip == TripDestination.BEIJING){
+                desAirport = "2";
+            } else if(destinationOfTrip == TripDestination.SHANGHAI){
+                desAirport = "3";
+            } else if(destinationOfTrip == TripDestination.OULU){
+                desAirport = "4";
+            } else if(destinationOfTrip == TripDestination.HELSINKI){
+                desAirport = "5";
+            }  else if(destinationOfTrip == TripDestination.PARIS){
+                desAirport = "6";
+            }
+
+
             setSourceAirport(srcAirport);
 
             setTripDestination(tripSource, tripDestination);
