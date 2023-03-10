@@ -78,7 +78,7 @@ public class FlightBookingTest
             fb.setTicketNumber(j);
         }
 
-        double expectedTicketPrice = 2* (((0*(300 + (0.15*300) + (0.1*300))) + (3*(300 + (0.15*300) + (0.1*300)))) + 250);
+        double expectedTicketPrice = 2*((0*(300 + (0.1*300) + (0.05*300) +250)) + (3*(300 + (0.1*300) + (0.05*300)+250) ));
         double returnedTicketPrice = fb.getTotalTicketPrice();
 
 
